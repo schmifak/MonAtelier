@@ -1,2 +1,2 @@
 # MonAtelier
-Test d'utilisation de Git pour la réalisation d'un atelier FreeCAD
+Test d'utilisation de Git à conserver
