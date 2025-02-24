@@ -168,7 +168,7 @@ bassePartieA = \relative {
 	\set TabStaff.minimumFret = #0
 	\set TabStaff.restrainOpenStrings = ##t	
 	\time 4/4
-	g,,8 g g4' g,8 g g4' | g,8 g g' b,~b c4 d8 |
+	g,,8 g g'4 g,8 g g'4 | g,8 g g' b,~b c4 d8 |
 	a,8 a r4 b8 b r16 g'8.|
 	e8 e r4 e8 e r16 g8.|
 	\time 3/4
