@@ -151,49 +151,86 @@ guitareOutro = \chords {
 }
 
 
-basseIntro = \relative {
+basse = \relative {
   %Intro
 
   \set TabStaff.minimumFret = #0
   \set TabStaff.restrainOpenStrings = ##t
-  \repeat percent 8 {r1} |
-  \repeat percent 7 {r1} | r2 r8 e,, f fis |
+  \compressMMRests { R1*4/4*8 } |
+  \compressMMRests { R1*4/4*7 } |
+  r2 r8 e,, f fis | \bar "||"
   g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. c-. c-. c-. b~ | b b g-. g-. g-. g-. f fis |
   g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. c-. c-. c-. b~ | b b g-. g-. g-. g-. f fis |
   \break
-}
 
-bassePartieA = \relative {	
-	%PartieA
-	\set TabStaff.minimumFret = #0
-	\set TabStaff.restrainOpenStrings = ##t	
-	\time 4/4
-	g,,8 g g'4 g,8 g g'4 | g,8 g g' b,~b c4 d8 |
-	a,8 a r4 b8 b r16 g'8.|
-	e8 e r4 e8 e r16 g8.|
-	\time 3/4
-	a,8 a r4 b8 e, |
-	\time 4/4
-	e'4 r2. |
-	e8 e r4 e16 d b r a g8. |
-	\bar "||"
-	\break
+  %Verse
+  \set TabStaff.minimumFret = #0
+  \set TabStaff.restrainOpenStrings = ##t	
+  \repeat volta 2 {
+    g8 g g'4 g,8 g g'4 | g,8 g g' bes,~bes c4 d8 | g,8 g g'4 f8 c f, g~ | g bes c d g d c bes |
+    g8 g g'4 g,8 g g'4 | g,8 g g' d f d g4 | g,8 g g'4 f8 c f,4 | 
+    \alternative {
+      \volta 1 { g8 d' des c bes g f ges }
+      \volta 2 { g4 g'8 f d c bes g }
+    }
+  }
+  \bar "||"
+  \break
+
+  %Chorus
+  \set TabStaff.minimumFret = #0
+  \set TabStaff.restrainOpenStrings = ##t	
+  c1 | aes | g4 bes8 g bes g f g~ | g g bes g bes g f4 | 
+  c'1 | aes2 r8 e f fis |
+  \bar "||"
+  \break
+
+  %Re-intro
+  g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. c-. c-. c-. b~ | b b g-. g-. g-. g-. f fis |
+  g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. c-. c-. c-. b~ | b b g-. g-. g-. g-. f fis |
+  \break
+
+  %Verse
+  \set TabStaff.minimumFret = #0
+  \set TabStaff.restrainOpenStrings = ##t	
+  \repeat volta 2 {
+    g8 g g'4 g,8 g g'4 | g,8 g g' bes,~bes c4 d8 | g,8 g g'4 f8 c f, g~ | g bes c d g d c bes |
+    g8 g g'4 g,8 g g'4 | g,8 g g' d f d g4 | g,8 g g'4 f8 c f,4 | 
+    \alternative {
+      \volta 1 { g8 d' des c bes g f ges }
+      \volta 2 { g4 g'8 f d c bes g }
+    }
+  }
+  \bar "||"
+  \break
+
+  %Chorus
+  \set TabStaff.minimumFret = #0
+  \set TabStaff.restrainOpenStrings = ##t	
+  c1 | aes | g4 bes8 g bes g f g~ | g g bes g bes g f4 | 
+  c'1 | aes2 r8 e f fis |
+  \bar "||"
+  \break
+
+  %Re-intro
+  g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. c-. c-. c-. b~ | b b g-. g-. g-. g-. f fis |
+  g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. c-. c-. c-. b~ | b b g-. g-. g-. g-. f fis |
+  \break
+
+  %Solo
+  g bes c d g f d c | bes g f fis g bes c d | c ees f g f ees c bes | g g' f d bes c d f | 
+  g bes, c g g' c, d f | bes, c bes g f g bes d | c g' f ees c bes c ees | g bes a f d c f4 |
+  g8 g f d c bes g bes | c d f g bes4 g8 f | c ees f g f ees c bes | g16 bes8 bes16 c8 c16 d~ d d f8 g f |
+  g, bes c d f d bes' f | g f d c bes g bes b | c c ees f g f ees f | g g f d c bes g bes |
+  c1~ | c1 | f,1~ | f2 r8 e f fis | 
 }
 
 bassePartieB = \relative {
 	
 	\set TabStaff.minimumFret = #0
 	\set TabStaff.restrainOpenStrings = ##t	
-	e,,8 e r2. |
-	e'8 e r4 e16 d b r a g8. |
-	e8 e r2. |
-	b'8 b r4 e16 d b r a g8. |
-	a8 a r4 b8 b r4 |
-	\time 2/4
-	e8 e r4 |
-	\time 4/4
-	a,1~|a~|a4 r2. | r1 |
-	b8^\markup "4.x tacet" b b b b b b b |
+	c1 | aes | g4 bes8 g bes g f g~ | g g bes g bes g f4 | 
+	c'1 | aes2 r8 e f fis |
 	\bar "||"
 	\break
 }
@@ -232,93 +269,18 @@ basseOutro = \relative {
   {
     \clef "bass_8"
     \time 4/4
-    \basseIntro
+    \basse
   }
   %\guitareIntro
   \new TabStaff \with {
     stringTunings = #bass-tuning
   }
   {
-    \basseIntro
+    \basse
   }
 >>
 
-\markup {Verse}
-<<
-  \new Voice \with {
-    \omit StringNumber
-  } 
-  {
-    \clef "bass_8"
-    \time 4/4
-    \bassePartieA
-  }
-  %\guitarePartieA
-  \new TabStaff \with {
-    stringTunings = #bass-tuning
-  } 
-  {
-    \bassePartieA
-  }
->>
 
-\markup {Chorus}
-<<
-  \new Voice \with {
-    \omit StringNumber
-  } 
-  {
-    \clef "bass_8"
-    \time 4/4
-    \bassePartieB
-  }
-  %\guitarePartieB
-  \new TabStaff \with {
-    stringTunings = #bass-tuning
-  }
-  {
-    \bassePartieB
-  }
->>
-
-\markup {Chorus (a capella)}
-<<
-	\new Voice \with {
-		\omit StringNumber
-	} 
-	{
-    \clef "bass_8"
-	\time 4/4
-    \bassePartieC
-	}
-	\guitarePartieC
-	\new TabStaff \with {
-		stringTunings = #bass-tuning
-	} 
-	{
-    \bassePartieC
-	}
->>
-
-\markup {Chorus (3 reprises)}
-<<
-	\new Voice \with {
-	\omit StringNumber
-   } 
-	{
-    \clef "bass_8"
-	\time 4/4
-    \basseOutro
-  }
-  	\guitareOutro
-  \new TabStaff \with {
-    stringTunings = #bass-tuning
-  } {
-    \basseOutro
-  }
-
-
->>
 
 
 \pageBreak
