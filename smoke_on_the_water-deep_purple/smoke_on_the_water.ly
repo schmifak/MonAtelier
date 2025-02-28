@@ -225,37 +225,7 @@ basse = \relative {
   c1~ | c1 | f,1~ | f2 r8 e f fis | 
 }
 
-bassePartieB = \relative {
-	
-	\set TabStaff.minimumFret = #0
-	\set TabStaff.restrainOpenStrings = ##t	
-	c1 | aes | g4 bes8 g bes g f g~ | g g bes g bes g f4 | 
-	c'1 | aes2 r8 e f fis |
-	\bar "||"
-	\break
-}
 
-bassePartieC = \relative {
-	
-	\time 4/4
-	r1 r1 r1 r1 |
-	\bar "||"
-	\break
-}
-
-basseOutro = \relative {
-	
-	%Outro
-	\set TabStaff.minimumFret = #0
-	\set TabStaff.restrainOpenStrings = ##t
-	\time 4/4
-	e,8 e r4 e8 e r16 g8.|
-	a,8 a r4 b8 b r16 g'8.|
-	e8 e r4 e8 e r16 g8.|
-	\time 3/4
-	a,8 a r4 b8 e, |
-	\bar "||"
-}
 	
 \markup {Smoke On The Water / Deep Purple}
 \markup {Structure : }
@@ -279,7 +249,6 @@ basseOutro = \relative {
     \basse
   }
 >>
-
 
 
 
