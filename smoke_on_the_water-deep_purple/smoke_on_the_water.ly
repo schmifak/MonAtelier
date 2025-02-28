@@ -159,6 +159,7 @@ basse = \relative {
   \compressMMRests { R1*4/4*8 } |
   \compressMMRests { R1*4/4*7 } |
   r2 r8 e,, f fis | \bar "||"
+\repeat segno 2 {
   g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. c-. c-. c-. b~ | b b g-. g-. g-. g-. f fis |
   g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. c-. c-. c-. b~ | b b g-. g-. g-. g-. f fis |
   \break
@@ -183,33 +184,7 @@ basse = \relative {
   c1 | aes | g4 bes8 g bes g f g~ | g g bes g bes g f4 | 
   c'1 | aes2 r8 e f fis |
   \bar "||"
-  \break
-
-  %Re-intro
-  g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. c-. c-. c-. b~ | b b g-. g-. g-. g-. f fis |
-  g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. g-. g-. g-. g-. | g-. g-. g-. g-. c-. c-. c-. b~ | b b g-. g-. g-. g-. f fis |
-  \break
-
-  %Verse
-  \set TabStaff.minimumFret = #0
-  \set TabStaff.restrainOpenStrings = ##t	
-  \repeat volta 2 {
-    g8 g g'4 g,8 g g'4 | g,8 g g' bes,~bes c4 d8 | g,8 g g'4 f8 c f, g~ | g bes c d g d c bes |
-    g8 g g'4 g,8 g g'4 | g,8 g g' d f d g4 | g,8 g g'4 f8 c f,4 | 
-    \alternative {
-      \volta 1 { g8 d' des c bes g f ges }
-      \volta 2 { g4 g'8 f d c bes g }
-    }
-  }
-  \bar "||"
-  \break
-
-  %Chorus
-  \set TabStaff.minimumFret = #0
-  \set TabStaff.restrainOpenStrings = ##t	
-  c1 | aes | g4 bes8 g bes g f g~ | g g bes g bes g f4 | 
-  c'1 | aes2 r8 e f fis |
-  \bar "||"
+}
   \break
 
   %Re-intro
