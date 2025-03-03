@@ -1,5 +1,32 @@
 %{
 Partie vocale de Hold The Line
+Chorus 1 et 2
+r4. r r r8  cis     e      | <fis>4.   r r r | %Lead Hold the line
+r4. r r r8 <cis e> <e gis> | <fis a>4. r r r | %Back
+
+r4. e8          fis         gis       a4           gis       fis8         e        |  fis4.       r r r | % Lead Love isn't always on time
+r4. <e gis b>8 <fis a cis> <gis b e> <a cis fis>4 <gis b e> <fis a cis>8 <e gis b> | <cis fis a>4 r r r | % Back
+
+r4. r r r8  cis     e        | <fis>4.       r r r | %Lead Hold the line
+r4. r r r8 <b e b> <e gis e> | <fis a fis>4. r r r | %Back
+
+r4. e8          fis         gis       a4           gis       fis8         e        |  fis4.       r r r | % Lead Love isn't always on time
+r4. <e gis e>8 <fis a fis> <gis b gis> <a cis a>4 <gis b gis> <fis a fis>8 <e gis e> | <cis fis a>4 r r r | % Back
+
+Chorus 3 
+r4. r r r8  cis     e      | <fis>4.   r r r | %Lead Hold the line
+r4. r r r8 <cis e> <e gis> | <fis a>4. r r r | %Back
+
+r4. e8          fis         gis       a4           gis       fis8         e        |  fis4.       r r r | % Lead Love isn't always on time
+r4. <e gis >8 <fis a> <gis b> <a cis>4 <gis b> <fis a>8 <e gis> | <cis fis>4 r r r | % Back
+
+r4. r r r8  cis     e        | <fis>4.       r r r | %Lead Hold the line
+r4. r r r8 <b e b> <e gis e> | <fis a fis>4. r r r | %Back
+
+r4. e8          fis         gis       a4           gis       fis8         e        |  fis4.       r r r | % Lead Love isn't always on time
+r4. <e gis e>8 <fis a fis> <gis b gis> <a cis a>4 <gis b gis> <fis a fis>8 <e gis e> | <cis fis a>4 r r r | % Back
+
+
 %}
 
 \paper {
@@ -118,6 +145,7 @@ basse = \relative {
 <<
   \new Voice \with {
   \omit StringNumber
+  \midi
   } 
   {
     \clef "bass_8"
@@ -228,3 +256,4 @@ downVerse = \drummode {
   \new DrumVoice { \voiceOne \upVerse }
   \new DrumVoice { \voiceTwo \downVerse }
 >>
+
