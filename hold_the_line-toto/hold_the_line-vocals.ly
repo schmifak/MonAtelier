@@ -1,11 +1,25 @@
 %{
+Index des captures d'écran
+0xx chant
+  01x lead
+  02x backing vocals
+
+
+
+%}
+
+
+
+
+
+%{
 Partie vocale de Hold The Line
 Chorus 1 et 2
 r4. r r r8  cis     e      | <fis>4.   r r r | %Lead Hold the line
 r4. r r r8 <cis e> <e gis> | <fis a>4. r r r | %Back
 
 r4. e8          fis         gis       a4           gis       fis8         e        |  fis4.       r r r | % Lead Love isn't always on time
-r4. <e gis b>8 <fis a cis> <gis b e> <a cis fis>4 <gis b e> <fis a cis>8 <e gis b> | <cis fis a>4 r r r | % Back
+r4. <e gis b>8 <fis a cis> <gis b e> <a cis fis>4 <gis b e> <fis a cis>8 <e gis b> | <cis fis a>4. r r r | % Back
 
 r4. r r r8  cis     e        | <fis>4.       r r r | %Lead Hold the line
 r4. r r r8 <b e b> <e gis e> | <fis a fis>4. r r r | %Back
@@ -86,6 +100,68 @@ guitareOutro = \chords {
 }
 
 
+vocal_lead = \relative {
+  %Intro
+  %\set TabStaff.minimumFret = #0
+  %\set TabStaff.restrainOpenStrings = ##t
+  \partial 4. r4. |
+  \compressMMRests { R1*12/8*8 } |
+  %Verse 1 et 2
+  \compressMMRests { R1*12/8*9 } |
+  r4. r r r8 cis' e | \bar "||"
+  %Chorus 1 et 2
+  fis4.^\markup{"Chorus 1 et 2"} r r r | r4. e8 fis gis a4 gis fis8 e | fis4. r r r | r4. r r r8 cis e |
+  fis4. r r r | r4. e8 fis gis a4 gis fis8 e | fis4. r r r | R1*12/8 | \bar"||" \break
+   %Verse 3
+  \compressMMRests { R1*12/8*9 } |
+  r4. r r r8 cis e | \bar "||"
+  %Chorus 3
+  %72 - 75
+  fis4.^\markup{"Chorus 3"} r r r | r4. e8 fis gis a4 gis fis8 e | fis4. r r r | r4. r r r8 cis e |
+  %76 - 79
+  fis4. r r r | r4. e8 fis gis a4 gis fis8 e | fis4. r r r | r4. r r r8 cis e |
+  %80 - 85
+  fis4 fis8 r4. r r | r4. e8 fis gis a4 gis fis8 e | fis4. r r r | r4. r r r8 cis e | fis4. r r r | r4. r r r8 cis e | \bar"||" \break
+  %Outro
+  %86 - 95
+  fis4.^\markup{"Outro"} r r r | 
+  r4. e8 fis gis a4 gis fis8 e | fis4. r r r | 
+  r4. e8 fis gis a4 gis fis8 e | fis4. r r r | 
+  r4. e8 fis gis a4 gis fis8 e | fis4. r r r | 
+  \compressMMRests { R1*12/8*3 } |
+}
+
+vocal_back = \relative {
+  %Intro
+  %\set TabStaff.minimumFret = #0
+  %\set TabStaff.restrainOpenStrings = ##t
+  \partial 4. r4. |
+  \compressMMRests { R1*12/8*8 } |
+  %Verse 1 et 2
+  \compressMMRests { R1*12/8*9 } |
+  r4. r r r8 <cis' e> <e gis> | 
+  %Chorus 1 et 2
+  <fis a>4. r r r | r4. <e gis b>8 <fis a cis> <gis b e> <a cis fis>4 <gis b e> <fis a cis>8 <e gis b> | <cis fis a>4. r r r | r4. r r r8 <b e cis'> <e gis e'> |
+  <fis a fis'>4. r r r | r4. <e gis e'>8 <fis a fis'> <gis b gis'> <a cis a'>4 <gis b gis'> <fis a fis'>8 <e gis e'> | <cis fis a>4. r r r | R1*12/8 |
+  %Verse 3
+  \compressMMRests { R1*12/8*9 } |
+  r4. r r r8 <cis e> <e gis> | 
+  %Chorus 3
+  <fis a>4. r r r | r4. <e gis>8 <fis a> <gis b> <a cis>4 <gis b> <fis a>8 <e gis> | <cis fis>4. r r r | r4. r r r8 <b e cis'> <e gis e'> |
+  <a fis'>4. r r r | r4. <gis b>8 <a cis> <b e> <cis fis>4 <b e> <a cis>8 <gis b> | <a cis>4. r r r | r4. r r r8 <cis, e cis'> <e gis e'> |
+  <fis a fis'>4 <fis a fis'>8 r4. r r | r4. <e gis b>8 <fis a cis> <gis b e> <a cis fis>4 <gis b e> <fis a cis>8 <e gis b> | <fis a cis>4. r r r | r4. r r r8 <cis e cis'> <e gis e'> |
+  <fis a fis'>4 <fis a fis'>8 r4. r r | r4. <e gis b>8 <fis a cis> <gis b e> <a cis fis>4 <gis b e> <fis a cis>8 <e gis b> | 
+  %Outro
+  <fis a cis>4.^\markup{Outro} r r r | 
+  r4. <e gis b>8 <fis a cis> <gis b e> <a cis fis>4 <gis b e> <fis a cis>8 <e gis b> | <fis a cis>4. r r r | 
+  r4. <e gis b>8 <fis a cis> <gis b e> <a cis fis>4 <gis b e> <fis a cis>8 <e gis b> | <fis a cis>4. r r r | 
+  r4. <e gis b>8 <fis a cis> <gis b e> <a cis fis>4 <gis b e> <fis a cis>8 <e gis b> | <fis a cis>4. r r r |
+  \compressMMRests { R1*12/8*3 } |
+
+
+}
+
+
 basse = \relative {
   %Intro
 
@@ -144,116 +220,31 @@ basse = \relative {
 \markup {Intro}
 <<
   \new Voice \with {
-  \omit StringNumber
-  \midi
+    \omit StringNumber
   } 
   {
-    \clef "bass_8"
-    \time 4/4
-    \basse
+    \time 12/8
+    \vocal_lead
   }
-  %\guitareIntro
-  \new TabStaff \with {
-    stringTunings = #bass-tuning
+  \new Voice \with {
+    \omit StringNumber
   }
   {
-    \basse
+    \vocal_back
   }
+%{
+  \new TabStaff \with {
+  }
+  {
+    \vocal_lead
+  }
+  \new TabStaff \with {
+  }
+  {
+    \vocal_back
+  }
+%}
 >>
 
 
-
-\pageBreak
-\markup {I Love Rock'n Roll / Joan Jett}
-\markup {Structure : I - C1 - V1 - C2 - V2 - C3 - V4(solo) - C4 (a capella) - C5 - C6 - C7}
-\markup {_}
-
-\markup {Intro}
-upIntro = \drummode {
-  \time 2/4
-  
-}
-downIntro = \drummode {
-  \time 2/4
-  sn16 sn sn sn sn sn sn sn | \bar"||"
-}
-\new DrumStaff <<
-  \new DrumVoice { \voiceOne \upIntro }
-  \new DrumVoice { \voiceTwo \downIntro }
->>
-
-\markup {Chorus : C1, C2, C3}
-upChorus = \drummode {
-  \time 4/4
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 |  
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 | 
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 | 
-  \time 3/4
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r |
-  \time 4/4
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 |  
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 | 
-  
-}
-downChorus = \drummode {
-  \time 4/4
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 |
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 |
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 |
-  \time 3/4
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r | 
-  \time 4/4
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 |
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 | \bar"||"
-}
-\new DrumStaff 
-  \with {
-    \consists Merge_rests_engraver}
-<<
-  \new DrumVoice { \voiceOne \upChorus }
-  \new DrumVoice { \voiceTwo \downChorus }
->>
-
-\markup {Verse : V1, V2, V3(solo Guitare) }
-upVerse = \drummode {
-  \time 4/4
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 |  
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 | 
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 | 
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 | 
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 | 
-  \time 2/4
-  hhc16 r hhc16 r hhc16 r r8 |
-  \time 4/4
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 |  
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 | 
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 |  
-  hhc16 r hhc16 r hhc16 r r8 hhc16 r hhc16 r hhc16 r r8 | 
-  hhc16 r hhc16 r hhc16 r hhc16 r hhc16 r hhc16 r hhc16 r hhc16 r | 
-  
-}
-downVerse = \drummode {
-  \time 4/4
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 |
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 |
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 |
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 |
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 |
-  \time 2/4
-  bd16 r bd16 r <<sn16 sn16>> r r8 | 
-  \time 4/4
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 |
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 |
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 |
-  bd16 r bd16 r <<sn16 sn16>> r r8 bd16 r bd16 r <<sn16 sn16>> r r8 |
-  <<bd16 sn16>> r r16 r <<bd16 sn16 sn16>> r r8 <<bd16 sn16>> r sn16 r <<bd16 sn16 sn16>> sn sn r16 |
-  \bar"||"
-}
-\new DrumStaff 
-  \with {
-    \consists Merge_rests_engraver}
-<<
-  \new DrumVoice { \voiceOne \upVerse }
-  \new DrumVoice { \voiceTwo \downVerse }
->>
 
